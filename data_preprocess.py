@@ -29,7 +29,7 @@ def raw2csv(raw_name, csv_name):
     with open(csv_name, 'a') as output:
         with open(raw_name, 'r') as input:
             for line in input:
-                output.write(line.replace('~', '').replace('^', ','))
+                output.write(line.replace('~', '').replace('^', ';'))
 
 def constructFoodMatrix(food_des, nut_data, nutr_def):
     # get the number of nutrition types
@@ -68,6 +68,7 @@ if __name__ == "__main__":
     # food_labels=np.load('data/FOOD_LAB.npy')
     # F = np.load('data/FOOD_MAT.npy')
     # nF=normalizeFoodMatrix(F)
-    fname = ['FOOD_DES', 'NUT_DATA', 'FD_GROUP', 'NUTR_DEF', 'WEIGHT', 'FOOTNOTE']
+    fname = ['FOOD_DES', 'NUT_DATA', 'FD_GROUP', 'NUTR_DEF', 'WEIGHT',
+             'FOOTNOTE', 'DATA_SRC', 'DATSRCLN', 'DERIV_CD', 'SRC_CD']
     for f in fname:
         raw2csv('sr22/' + f + '.txt', 'data/' + f + '.csv')
