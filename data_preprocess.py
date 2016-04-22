@@ -1,7 +1,6 @@
 import os.path
 
 import numpy as np
-from sklearn import preprocessing
 
 
 def extractRawData(fname):
@@ -56,10 +55,6 @@ def constructFoodMatrix(food_des, nut_data, nutr_def):
     np.save('data/FOOD_MAT', F)
 
 
-def normalizeFoodMatrix(F):
-    nF0 = preprocessing.maxabs_scale(F, axis=0)
-    a = 0
-
 if __name__ == "__main__":
     # food_des = extractRawData('sr22/FOOD_DES.txt')
     # nut_data = extractRawData('sr22/NUT_DATA.txt')
@@ -70,5 +65,5 @@ if __name__ == "__main__":
     # nF=normalizeFoodMatrix(F)
     fname = ['FOOD_DES', 'NUT_DATA', 'FD_GROUP', 'NUTR_DEF', 'WEIGHT',
              'FOOTNOTE', 'DATA_SRC', 'DATSRCLN', 'DERIV_CD', 'SRC_CD']
-    for f in fname:
-        raw2csv('sr22/' + f + '.txt', 'data/' + f + '.csv')
+    # for f in fname:
+    #     raw2csv('sr22/' + f + '.txt', 'data/' + f + '.csv')
