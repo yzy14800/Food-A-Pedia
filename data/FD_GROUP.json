@@ -1,0 +1,77 @@
+{
+  "100": {
+    "GRP_NAME": "Dairy and Egg Products"
+  },
+  "200": {
+    "GRP_NAME": "Spices and Herbs"
+  },
+  "300": {
+    "GRP_NAME": "Baby Foods"
+  },
+  "400": {
+    "GRP_NAME": "Fats and Oils"
+  },
+  "500": {
+    "GRP_NAME": "Poultry Products"
+  },
+  "600": {
+    "GRP_NAME": "Soups, Sauces, and Gravies"
+  },
+  "700": {
+    "GRP_NAME": "Sausages and Luncheon Meats"
+  },
+  "800": {
+    "GRP_NAME": "Breakfast Cereals"
+  },
+  "900": {
+    "GRP_NAME": "Fruits and Fruit Juices"
+  },
+  "1000": {
+    "GRP_NAME": "Pork Products"
+  },
+  "1100": {
+    "GRP_NAME": "Vegetables and Vegetable Products"
+  },
+  "1200": {
+    "GRP_NAME": "Nut and Seed Products"
+  },
+  "1300": {
+    "GRP_NAME": "Beef Products"
+  },
+  "1400": {
+    "GRP_NAME": "Beverages"
+  },
+  "1500": {
+    "GRP_NAME": "Finfish and Shellfish Products"
+  },
+  "1600": {
+    "GRP_NAME": "Legumes and Legume Products"
+  },
+  "1700": {
+    "GRP_NAME": "Lamb, Veal, and Game Products"
+  },
+  "1800": {
+    "GRP_NAME": "Baked Products"
+  },
+  "1900": {
+    "GRP_NAME": "Sweets"
+  },
+  "2000": {
+    "GRP_NAME": "Cereal Grains and Pasta"
+  },
+  "2100": {
+    "GRP_NAME": "Fast Foods"
+  },
+  "2200": {
+    "GRP_NAME": "Meals, Entrees, and Sidedishes"
+  },
+  "2500": {
+    "GRP_NAME": "Snacks"
+  },
+  "3500": {
+    "GRP_NAME": "Ethnic Foods"
+  },
+  "3600": {
+    "GRP_NAME": "Restaurant Foods"
+  }
+}

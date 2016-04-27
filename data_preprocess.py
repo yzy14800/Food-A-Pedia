@@ -28,7 +28,7 @@ def raw2csv(raw_name, csv_name):
     with open(csv_name, 'a') as output:
         with open(raw_name, 'r') as input:
             for line in input:
-                output.write(line.replace('~', '').replace('^', ';'))
+                output.write(line.replace('~', ''))
 
 def constructFoodMatrix(food_des, nut_data, nutr_def):
     # get the number of nutrition types
@@ -41,19 +41,18 @@ def constructFoodMatrix(food_des, nut_data, nutr_def):
     # get the labels of food
     food_labels = []
     for f in food_des:
-        ndb_no = f[0].decode('utf-8').strip('~')
+        ndb_no = (int)(f[0].decode('utf-8').strip('~'))
         food_labels.append(ndb_no)
     np.save('data/FOOD_LAB', np.array(food_labels))
 
     # construct food matrix
     F = np.zeros((food_des.size, max_nutr_no), dtype=float)
     for n in nut_data:
-        ndb_no = n[0].decode('utf-8').strip('~')
+        ndb_no = (int)(n[0].decode('utf-8').strip('~'))
         nutr_no = (int)(n[1].decode('utf-8').strip('~')) - 1
         row = food_labels.index(ndb_no)
         F[row, nutr_no] = n[2]
     np.save('data/FOOD_MAT', F)
-
 
 if __name__ == "__main__":
     # food_des = extractRawData('sr22/FOOD_DES.txt')
@@ -65,5 +64,5 @@ if __name__ == "__main__":
     # nF=normalizeFoodMatrix(F)
     fname = ['FOOD_DES', 'NUT_DATA', 'FD_GROUP', 'NUTR_DEF', 'WEIGHT',
              'FOOTNOTE', 'DATA_SRC', 'DATSRCLN', 'DERIV_CD', 'SRC_CD']
-    # for f in fname:
-    #     raw2csv('sr22/' + f + '.txt', 'data/' + f + '.csv')
+    for f in fname:
+        raw2csv('sr22/' + f + '.txt', 'data/' + f + '.csv')
