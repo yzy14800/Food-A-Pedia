@@ -41,7 +41,7 @@ def getSubstitute(ndb_no, C, F, L, n):
     S = calSimilarity(c)
     s = S[i].T
     I = np.argsort(-s, axis=0)
-    return l[I[:n - 1, :]].ravel()
+    return l[I[0:n, :]].ravel()
 
 if __name__ == "__main__":
     F = np.load('data/FOOD_MAT.npy')
